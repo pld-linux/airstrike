@@ -36,7 +36,7 @@ PovRaya grafik±.
 %patch0 -p1
 
 %build
-%{_make}
+%{__make}
 
 %install
 rm -rf $RPM_BUILD_ROOT
