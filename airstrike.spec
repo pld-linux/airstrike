@@ -26,10 +26,17 @@ easy to extend and modify. Airstrike is being developed using GNU
 tools and the excellent SDL library, and has been ported from the
 original Linux version to both Windows and Mac OSX.
 
-#%description -l pl
-#Airstrike jest dwuwymiarow± gr± polegaj±c± na wzajemnym ostrzeliwaniu
-#siê z plastikowych samolocików. A wszystko z ³adnie wykonan± za pomoc±
-#PovRaya grafik±.
+%description -l pl
+Airstrike jest dwuwymiarow± gr± polegaj±c± na wzajemnym ostrzeliwaniu
+siê z plastikowych samolocików, utrzyman± w tradycji gier "Bigplanes"
+i "BIP" z Intellivision i Amigi. Ma rozbudowany silnik fizyczny oraz
+ró¿ne rozszerzenia oryginalnych gier. Aktualnie jest gr± tylko dla 0-2
+graczy, ale, miejmy nadziejê, dorobi siê obs³ugi gry przez sieæ oraz
+bardziej zaawansowanych wrogów sterowanych przez komputer. Grafika
+zosta³a stworzona za pomoc± raytracera Povray i powinna byæ ³atwa w
+rozbudowywaniu i modyfikacji. Airstrike zosta³ stworzony przy u¿yciu
+narzêdzi GNU i ¶wietnej biblioteki SDL, a z oryginalnej wersji
+linuksowej zosta³ sportowany dodatkowo na Windows i Mac OSX.
 
 %prep
 %setup -q -n %{name}-%{version}-src
@@ -44,6 +51,7 @@ original Linux version to both Windows and Mac OSX.
 %install
 rm -rf $RPM_BUILD_ROOT
 install -d $RPM_BUILD_ROOT{%{_datadir}/games/airstrike,%{_mandir}/man6,%{_bindir}}
+
 cp -rf  data $RPM_BUILD_ROOT%{_datadir}/games/airstrike
 install doc/airstrike.6 $RPM_BUILD_ROOT%{_mandir}/man6
 install airstrike $RPM_BUILD_ROOT%{_bindir}
