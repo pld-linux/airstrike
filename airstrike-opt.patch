@@ -1,0 +1,30 @@
+--- airstrike-pre6a-src/src/Makefile.orig	2003-01-18 21:02:32.000000000 +0100
++++ airstrike-pre6a-src/src/Makefile	2004-02-08 01:41:45.734701840 +0100
+@@ -1,4 +1,5 @@
+-CFLAGS:= -g -O2 -Wall -Wno-unused $(OPTIONS)
++OPT = -O2
++CFLAGS:= $(OPT) -Wall -Wno-unused $(OPTIONS)
+ #
+ CFLAGS += $(shell sdl-config --cflags) -Isprite -I. -Isupport -DINLINE=inline
+ CFILES:= $(shell find . -name '*.c')
+--- airstrike-pre6a-src/utils/Makefile.orig	2003-01-18 20:48:05.000000000 +0100
++++ airstrike-pre6a-src/utils/Makefile	2004-02-08 01:42:08.628221496 +0100
+@@ -2,13 +2,13 @@
+ all: showanim hfinter heightfield
+ 
+ showanim: showanim.c
+-	$(CC) -Wall -o $@ $^ `sdl-config --cflags --libs` -lSDL_image
++	$(CC) $(OPT) -Wall -o $@ $^ `sdl-config --cflags --libs` -lSDL_image
+ 
+ hfinter: hfinter.c
+-	$(CC) -Wall -o $@ $^ `sdl-config --cflags --libs` -lSDL_image
++	$(CC) $(OPT) -Wall -o $@ $^ `sdl-config --cflags --libs` -lSDL_image
+ 
+ heightfield: heightfield.c
+-	$(CC) -Wall -g -o $@ $^ `sdl-config --cflags --libs` -lSDL_image
++	$(CC) $(OPT) -Wall -o $@ $^ `sdl-config --cflags --libs` -lSDL_image
+ 
+ clean:
+-	rm -f showanim *~ \#*
+\ Brak znaku nowej linii na koñcu pliku
++	rm -f showanim *~ \#*
