@@ -8,8 +8,9 @@ Group:		Applications/Games
 Source0:	http://icculus.org/airstrike/%{name}-%{version}-src.tar.gz
 # Source0-md5:	af7367f9223309fbcf9759e04028394e
 Patch0:		%{name}-pld.patch
+Patch1:		%{name}-opt.patch
 URL:		http://icculus.org/airstrike/
-BuildRequires:	SDL-devel => 1.2
+BuildRequires:	SDL-devel >= 1.2
 BuildRequires:	SDL_mixer-devel
 BuildRequires:	SDL_image-devel
 BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
@@ -34,9 +35,12 @@ PovRaya grafik±.
 %prep
 %setup -q -n %{name}-%{version}-src
 %patch0 -p1
+%patch1 -p1
 
 %build
-%{__make}
+%{__make} \
+	CC="%{__cc}" \
+	OPT="%{rpmcflags}"
 
 %install
 rm -rf $RPM_BUILD_ROOT
@@ -45,6 +49,8 @@ cp -rf  data $RPM_BUILD_ROOT%{_datadir}/games/airstrike
 install doc/airstrike.6 $RPM_BUILD_ROOT%{_mandir}/man6
 install airstrike $RPM_BUILD_ROOT%{_bindir}
 install airstrikerc $RPM_BUILD_ROOT%{_datadir}/games/airstrike
+
+rm -f doc/airstrike.6
 
 %clean
 rm -rf $RPM_BUILD_ROOT
