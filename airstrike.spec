@@ -4,7 +4,7 @@ Name:		airstrike
 Version:	pre6a
 Release:	1
 License:	GPL
-Group:		Applications/Games
+Group:		X11/Applications/Games
 Source0:	http://icculus.org/airstrike/%{name}-%{version}-src.tar.gz
 # Source0-md5:	af7367f9223309fbcf9759e04028394e
 Patch0:		%{name}-pld.patch
