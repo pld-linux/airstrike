@@ -5,10 +5,10 @@ Version:	pre6a
 Release:	1
 License:	GPL
 Group:		Applications/Games
-URL:		http://icculus.org/airstrike/
 Source0:	http://icculus.org/airstrike/%{name}-%{version}-src.tar.gz
 # Source0-md5:	af7367f9223309fbcf9759e04028394e
 Patch0:		%{name}-pld.patch
+URL:		http://icculus.org/airstrike/
 BuildRequires:	SDL-devel => 1.2
 BuildRequires:	SDL_mixer-devel
 BuildRequires:	SDL_image-devel
