@@ -52,6 +52,6 @@ rm -rf $RPM_BUILD_ROOT
 %files
 %defattr(644,root,root,755)
 %doc doc/*
-%attr(644,root,root) %{_mandir}/man6/*
-%attr(644,root,root) %{_datadir}/games/airstrike/*
 %attr(755,root,root) %{_bindir}/*
+%{_mandir}/man6/*
+%{_datadir}/games/airstrike/*
