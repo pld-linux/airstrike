@@ -1,0 +1,36 @@
+diff -urN airstrike-pre6a-src.orig/airstrikerc airstrike-pre6a-src/airstrikerc
+--- airstrike-pre6a-src.orig/airstrikerc	2003-01-18 20:48:11.000000000 +0100
++++ airstrike-pre6a-src/airstrikerc	2004-02-06 23:48:28.000000000 +0100
+@@ -4,7 +4,7 @@
+ 
+ 
+ # The path where the program looks for its data files
+-datapath "data"
++datapath "/usr/share/games/airstrike/data"
+ 
+ #window size or fullscreen resolution
+ screen.width 800
+diff -urN airstrike-pre6a-src.orig/src/airstrike.c airstrike-pre6a-src/src/airstrike.c
+--- airstrike-pre6a-src.orig/src/airstrike.c	2003-01-18 20:48:05.000000000 +0100
++++ airstrike-pre6a-src/src/airstrike.c	2004-02-06 23:48:53.000000000 +0100
+@@ -74,7 +74,7 @@
+   console_set_pos(9,254);
+   console_load_bg(path_to_data("console-bg.png"));
+   sprite_types_setup();
+-  sprite_background_load("data/bg.png","data/bgmask.png");
++  sprite_background_load("/usr/share/games/airstrike/data/bg.png","/usr/share/games/airstrike/data/bgmask.png");
+ 
+   level_setup();
+   winds_setup();
+diff -urN airstrike-pre6a-src.orig/src/config.h airstrike-pre6a-src/src/config.h
+--- airstrike-pre6a-src.orig/src/config.h	2003-01-18 20:48:05.000000000 +0100
++++ airstrike-pre6a-src/src/config.h	2004-02-06 23:48:28.000000000 +0100
+@@ -6,7 +6,7 @@
+ /* absolute path to main config file (for now it's airstrikerc in the
+    current dir)*/
+ #ifndef ROOT_CONFIG_FILE
+-#define ROOT_CONFIG_FILE "airstrikerc"
++#define ROOT_CONFIG_FILE "/usr/share/games/airstrike/airstrikerc"
+ #endif
+ /* path to file in users $HOME */
+ #ifndef USER_CONFIG_FILE
