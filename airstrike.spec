@@ -24,13 +24,12 @@ some more advanced computer controlled enemies in the future. The
 graphics have been created using the Povray raytracer, and should be
 easy to extend and modify. Airstrike is being developed using GNU
 tools and the excellent SDL library, and has been ported from the
-original Linux version to both Windows and Mac OSX. The game is
-released under the GPL.
+original Linux version to both Windows and Mac OSX.
 
-%description -l pl
-Airstrike jest dwuwymiarow± gr± polegaj±c± na wzajemnym ostrzeliwaniu
-siê z plastikowych samolocików. A wszystko z ³adnie wykonan± za pomoc±
-PovRaya grafik±.
+#%description -l pl
+#Airstrike jest dwuwymiarow± gr± polegaj±c± na wzajemnym ostrzeliwaniu
+#siê z plastikowych samolocików. A wszystko z ³adnie wykonan± za pomoc±
+#PovRaya grafik±.
 
 %prep
 %setup -q -n %{name}-%{version}-src
