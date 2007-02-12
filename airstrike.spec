@@ -1,5 +1,5 @@
 Summary:	Airstrike
-Summary(pl.UTF-8):   Airstrike - Plastikowy Czerwony Baron
+Summary(pl.UTF-8):	Airstrike - Plastikowy Czerwony Baron
 Name:		airstrike
 Version:	pre6a
 Release:	1
