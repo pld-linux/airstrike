@@ -1,5 +1,5 @@
 Summary:	Airstrike
-Summary(pl):	Airstrike - Plastikowy Czerwony Baron
+Summary(pl.UTF-8):   Airstrike - Plastikowy Czerwony Baron
 Name:		airstrike
 Version:	pre6a
 Release:	1
@@ -26,17 +26,17 @@ easy to extend and modify. Airstrike is being developed using GNU
 tools and the excellent SDL library, and has been ported from the
 original Linux version to both Windows and Mac OSX.
 
-%description -l pl
-Airstrike jest dwuwymiarow± gr± polegaj±c± na wzajemnym ostrzeliwaniu
-siê z plastikowych samolocików, utrzyman± w tradycji gier "Bigplanes"
+%description -l pl.UTF-8
+Airstrike jest dwuwymiarowÄ… grÄ… polegajÄ…cÄ… na wzajemnym ostrzeliwaniu
+siÄ™ z plastikowych samolocikÃ³w, utrzymanÄ… w tradycji gier "Bigplanes"
 i "BIP" z Intellivision i Amigi. Ma rozbudowany silnik fizyczny oraz
-ró¿ne rozszerzenia oryginalnych gier. Aktualnie jest gr± tylko dla 0-2
-graczy, ale, miejmy nadziejê, dorobi siê obs³ugi gry przez sieæ oraz
-bardziej zaawansowanych wrogów sterowanych przez komputer. Grafika
-zosta³a stworzona za pomoc± raytracera Povray i powinna byæ ³atwa w
-rozbudowywaniu i modyfikacji. Airstrike zosta³ stworzony przy u¿yciu
-narzêdzi GNU i ¶wietnej biblioteki SDL, a z oryginalnej wersji
-linuksowej zosta³ sportowany dodatkowo na Windows i Mac OSX.
+rÃ³Å¼ne rozszerzenia oryginalnych gier. Aktualnie jest grÄ… tylko dla 0-2
+graczy, ale, miejmy nadziejÄ™, dorobi siÄ™ obsÅ‚ugi gry przez sieÄ‡ oraz
+bardziej zaawansowanych wrogÃ³w sterowanych przez komputer. Grafika
+zostaÅ‚a stworzona za pomocÄ… raytracera Povray i powinna byÄ‡ Å‚atwa w
+rozbudowywaniu i modyfikacji. Airstrike zostaÅ‚ stworzony przy uÅ¼yciu
+narzÄ™dzi GNU i Å›wietnej biblioteki SDL, a z oryginalnej wersji
+linuksowej zostaÅ‚ sportowany dodatkowo na Windows i Mac OSX.
 
 %prep
 %setup -q -n %{name}-%{version}-src
