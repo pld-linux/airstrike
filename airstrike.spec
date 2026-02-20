@@ -2,7 +2,7 @@ Summary:	Airstrike
 Summary(pl.UTF-8):	Airstrike - Plastikowy Czerwony Baron
 Name:		airstrike
 Version:	pre6a
-Release:	1
+Release:	2
 License:	GPL
 Group:		X11/Applications/Games
 Source0:	http://icculus.org/airstrike/%{name}-%{version}-src.tar.gz
