@@ -1,0 +1,11 @@
+--- airstrike-pre6a-src/src/Makefile.orig	2026-05-11 23:57:06.383150573 +0200
++++ airstrike-pre6a-src/src/Makefile	2026-05-11 23:57:06.385201207 +0200
+@@ -6,7 +6,7 @@
+ OBJECTS:= $(CFILES:.c=.o)
+ 
+ airstrike: $(OBJECTS)
+-	$(CC) -o $@ $(CFLAGS) $(OBJECTS) `sdl-config --libs` -lSDL_image
++	$(CC) -o $@ $(CFLAGS) $(OBJECTS) `sdl-config --libs` -lSDL_image -lm
+ 
+ airstrike-sound: $(OBJECTS)
+ 	$(CC) -o $@ $(CFLAGS) $(OBJECTS) `sdl-config --libs` -lSDL_image -lSDL_mixer

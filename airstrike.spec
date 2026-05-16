@@ -2,13 +2,14 @@ Summary:	Airstrike
 Summary(pl.UTF-8):	Airstrike - Plastikowy Czerwony Baron
 Name:		airstrike
 Version:	pre6a
-Release:	2
+Release:	3
 License:	GPL
 Group:		X11/Applications/Games
 Source0:	http://icculus.org/airstrike/%{name}-%{version}-src.tar.gz
 # Source0-md5:	af7367f9223309fbcf9759e04028394e
 Patch0:		%{name}-pld.patch
 Patch1:		%{name}-opt.patch
+Patch2:		%{name}-libm.patch
 URL:		http://icculus.org/airstrike/
 BuildRequires:	SDL-devel >= 1.2
 BuildRequires:	SDL_mixer-devel
@@ -42,6 +43,7 @@ linuksowej został sportowany dodatkowo na Windows i Mac OSX.
 %setup -q -n %{name}-%{version}-src
 %patch -P0 -p1
 %patch -P1 -p1
+%patch -P2 -p1
 
 %build
 %{__make} \
